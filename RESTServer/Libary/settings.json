@@ -1,0 +1,16 @@
+{
+  "Network": {
+    "Address": "localhost",
+    "Port": 8080
+  },
+  "MaxRequestLineSize": 0,
+  "MaxRequestHeaderSize": 0,
+  "MaxActiveRequests": 0,
+  "MaxUrlEncodedFormSize": 0,
+  "MaxPostSize": 0,
+  "RequestIdleTimeoutSeconds": 0,
+  "RequestHeaderReadTimeoutSeconds": 0,
+  "KeepAliveMaxRequests": 0,
+  "KeepAliveTimeoutSeconds": 0,
+  "MaxProcessingTimeSeconds" :  0
+}

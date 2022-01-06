@@ -31,11 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ceen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ceen.Httpd.0.9.9\lib\netstandard2.0\Ceen.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ceen.Httpd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ceen.Httpd.0.9.9\lib\netstandard2.0\Ceen.Httpd.dll</HintPath>
+    </Reference>
     <Reference Include="ESB_ConnectionPoints.PluginsInterfaces">
       <HintPath>..\..\ESBpatio\EmailClient\EmailClient\ESB_ConnectionPoints.PluginsInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="ESB_ConnectionPoints.Utils">
+    <Reference Include="ESB_ConnectionPoints.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ESBpatio\EmailClient\EmailClient\ESB_ConnectionPoints.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,7 +57,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiController.cs" />
+    <Compile Include="IngoingConnectionPoint.cs" />
+    <Compile Include="IngoingConnectionPointFactory.cs" />
+    <Compile Include="JsonUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Libary\settings.json" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
