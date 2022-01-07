@@ -2,6 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using ESB_ConnectionPoints.PluginsInterfaces;
+using System.IO;
 
 namespace RESTServer
 {
@@ -23,6 +24,9 @@ namespace RESTServer
         private bool ProcessRequest(IHttpContext context)
         {
             var a = context.Request.Method;
+            var b = context.Request.Body;
+            StreamReader reader = new StreamReader(b);
+            string text = reader.ReadToEnd();
             return true;
         }
     }
