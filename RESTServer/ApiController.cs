@@ -96,7 +96,7 @@ namespace RESTServer
                 message.AddPropertyWithValue<string>("Path", context.Request.Path);
                 foreach (KeyValuePair<string, string> header in (IEnumerable<KeyValuePair<string, string>>)context.Request.Headers)
                 {
-                    if (header.Key.Contains("Properties_"))
+                    if (header.Key.Contains("Propertie_"))
                     {
                         string str = this.PrepareHTTPResponceProperty(header.Key);
                         message.AddPropertyWithValue<string>(str, header.Value);
