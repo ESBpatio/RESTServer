@@ -101,6 +101,8 @@ namespace RESTServer
                         string str = this.PrepareHTTPResponceProperty(header.Key);
                         message.AddPropertyWithValue<string>(str, header.Value);
                     }
+                    if (header.Key.Equals("ClassId"))
+                        message.ClassId = header.Value;
                 }
                 if (body != null)
                     message.Body = body;
