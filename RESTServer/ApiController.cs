@@ -103,6 +103,8 @@ namespace RESTServer
                     }
                     if (header.Key.Equals("ClassId"))
                         message.ClassId = header.Value;
+                    if (header.Key.Equals("Type"))
+                        message.Type = header.Value;
                 }
                 if (body != null)
                     message.Body = body;
